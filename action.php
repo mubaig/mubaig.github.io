@@ -1,8 +1,10 @@
 <?php
 
-$email=$_POST<'email'>;
-$name=$_POST<'name'>;
-$data=$name.",".$email;
+$fname=$_POST<'fname'>;
+$lname=$_POST<'lname'>;
+$country=$_POST<'country'>;
+
+$data=$fname.",".$lname","$country;
 
 
 $file="file.csv";
