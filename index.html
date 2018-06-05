@@ -1,5 +1,6 @@
 <?php
 //index.php
+var nameValue = document.getElementById("uniqueID").value;
 
 $error = '';
 $name = '';
@@ -132,7 +133,7 @@ if(isset($_POST["submit"]))
         <p>Swing by for a cup of coffee, or leave us a message:</p>
       </div>
     <div class="row">
-      <form action="action.php" method="POST">
+      <form action="disqus_thread" method="POST">
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Last Name</label>
@@ -149,5 +150,19 @@ if(isset($_POST["submit"]))
         <input type="submit" value="Submit">
       </form>
     </div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var nameValue = document.getElementById("fname").value; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
  </footer>
 </html>
