@@ -1,2 +1,2 @@
-# Mirza Usman Baig
+# Mirza Baig
 Profile
